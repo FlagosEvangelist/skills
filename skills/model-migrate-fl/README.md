@@ -240,22 +240,6 @@ Manages the GT vLLM server on a remote machine via SSH -> Docker exec -> Conda r
 
 ---
 
-## vLLM and transformers Relationship
-
-Understanding the division of responsibilities is essential for migration:
-
-```
-transformers provides:              vLLM provides:
-  Config parsing (AutoConfig)         Model structure (own nn.Module)
-  Tokenizer                           Inference engine (PagedAttention etc.)
-  Image/Video Processor               Weight loading
-  Does NOT run inference              API Server
-```
-
-When the installed transformers version lacks a new model's Config class, a **Config Bridge** must be created in the plugin (`vllm_fl/configs/`) to map the HF config.json into a recognizable Python configuration object.
-
----
-
 ## Usage in vllm-plugin-FL
 
 Claude Code requires skills to be placed under `.claude/skills/` in the project root. To use this skill in vllm-plugin-FL:
