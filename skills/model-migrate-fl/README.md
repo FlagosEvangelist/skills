@@ -253,3 +253,15 @@ transformers provides:              vLLM provides:
 ```
 
 When the installed transformers version lacks a new model's Config class, a **Config Bridge** must be created in the plugin (`vllm_fl/configs/`) to map the HF config.json into a recognizable Python configuration object.
+
+---
+
+## Usage in vllm-plugin-FL
+
+Claude Code requires skills to be placed under `.claude/skills/` in the project root. To use this skill in vllm-plugin-FL:
+
+```bash
+# From vllm-plugin-FL project root
+mkdir -p .claude/skills
+cp -r <path-to-this-repo>/skills/model-migrate-fl .claude/skills/
+```

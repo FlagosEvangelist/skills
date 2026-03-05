@@ -250,3 +250,15 @@ transformers 提供：              vLLM 提供：
 ```
 
 当 transformers 版本没有新模型的 Config 类时，需要在 plugin 中创建 **Config Bridge**（`vllm_fl/configs/`），将 HF config.json 映射为可识别的 Python 配置对象。
+
+---
+
+## 在 vllm-plugin-FL 中使用
+
+Claude Code 要求 skill 放在项目根目录的 `.claude/skills/` 下。在 vllm-plugin-FL 中使用本 skill：
+
+```bash
+# 在 vllm-plugin-FL 项目根目录执行
+mkdir -p .claude/skills
+cp -r <本仓库路径>/skills/model-migrate-fl .claude/skills/
+```
