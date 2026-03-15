@@ -6,7 +6,7 @@
 
 Skills are **folder-based capability packages**: each skill uses documentation, scripts, and resources to teach agents to reliably and reproducibly complete tasks in a specific domain. Each skill folder contains a `SKILL.md` file with YAML frontmatter (name + description) followed by detailed agent instructions. Skills can also include reference docs, scripts, and assets.
 
-This repository follows the [Agent Skills open standard](https://agentskills.io/specification), aligned with [anthropics/skills](https://github.com/anthropics/skills), [huggingface/skills](https://github.com/huggingface/skills), and [openai/skills](https://github.com/openai/skills).
+This repository follows the [Agent Skills open standard](https://agentskills.io/specification).
 
 ## Quick Start
 
@@ -184,17 +184,6 @@ See [contributing.md](contributing.md) for the full contribution guide.
 | **deployment** | Environment checks, container builds, multi-chip CI | — |
 | **enterprise-standards** | Brand guidelines, doc templates, code standards | — |
 | **tool-integration** | CI/CD, monitoring, internal platforms, third-party SaaS | — |
-
-## Alignment with Major Skills Repositories
-
-| Feature | This Repo | Anthropic | HuggingFace | OpenAI |
-|---------|-----------|-----------|-------------|--------|
-| Standard | agentskills.io | agentskills.io | agentskills.io | agentskills.io |
-| IDE Support | Claude Code, Cursor, Codex, Gemini CLI | Claude Code, Claude.ai, API | Claude Code, Codex, Gemini, Cursor | Codex |
-| Plugin Manifests | `.claude-plugin/` + `.cursor-plugin/` | `.claude-plugin/` | `.claude-plugin/` + `.cursor-plugin/` | — |
-| Organization | Flat | Flat | Flat | `.system/` + `.curated/` + `.experimental/` |
-| Validation | `scripts/validate_skills.py` | — | `scripts/publish.sh` | — |
-| Contribution Guide | `contributing.md` | — | — | `contributing.md` |
 
 ## License
 
