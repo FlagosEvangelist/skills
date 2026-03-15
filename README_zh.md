@@ -6,7 +6,7 @@
 
 Skills 是一组**文件夹化的能力包**：每个 Skill 通过说明文档、脚本和资源，教会智能体在某一类任务上稳定、可复现地完成工作。每个 Skill 文件夹包含一个 `SKILL.md` 文件（YAML frontmatter + Markdown 正文），作为智能体的详细执行指令。还可包含参考文档、脚本和资源文件。
 
-本仓库遵循 [Agent Skills 开放标准](https://agentskills.io/specification)，与 [anthropics/skills](https://github.com/anthropics/skills)、[huggingface/skills](https://github.com/huggingface/skills)、[openai/skills](https://github.com/openai/skills) 对齐。
+本仓库遵循 [Agent Skills 开放标准](https://agentskills.io/specification)。
 
 ## 快速开始
 
@@ -184,17 +184,6 @@ gemini extensions install https://github.com/flagos-ai/skills.git --consent
 | **deployment** | 环境检查、容器构建、多芯片 CI | — |
 | **enterprise-standards** | 品牌规范、文档模版、代码规范 | — |
 | **tool-integration** | CI/CD、监控系统、内部平台、第三方 SaaS | — |
-
-## 与主流 Skills 仓库对齐
-
-| 特性 | 本仓库 | Anthropic | HuggingFace | OpenAI |
-|------|--------|-----------|-------------|--------|
-| 标准 | agentskills.io | agentskills.io | agentskills.io | agentskills.io |
-| IDE 支持 | Claude Code, Cursor, Codex, Gemini CLI | Claude Code, Claude.ai, API | Claude Code, Codex, Gemini, Cursor | Codex |
-| 插件清单 | `.claude-plugin/` + `.cursor-plugin/` | `.claude-plugin/` | `.claude-plugin/` + `.cursor-plugin/` | — |
-| 组织方式 | 平铺 | 平铺 | 平铺 | `.system/` + `.curated/` + `.experimental/` |
-| 验证工具 | `scripts/validate_skills.py` | — | `scripts/publish.sh` | — |
-| 贡献指南 | `contributing.md` | — | — | `contributing.md` |
 
 ## 许可证
 
