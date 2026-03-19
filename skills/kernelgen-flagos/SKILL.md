@@ -5,7 +5,7 @@ description: >
   (FlagGems, vLLM, or general Python/Triton) and dispatches to the appropriate specialized
   sub-skill. Also includes a feedback submission sub-skill for bug reports. Use this skill when
   the user wants to generate a GPU kernel operator, create a Triton kernel, or says things like
-  "generate an operator", "create a kernel for X", or "/kernelgen". This single skill replaces
+  "generate an operator", "create a kernel for X", or "/kernelgen-flagos". This single skill replaces
   the need to install kernelgen-general, kernelgen-for-flaggems, kernelgen-for-vllm, and
   kernelgen-submit-feedback separately.
 argument-hint: "<operator_name> [--func-type <type>]"
@@ -30,7 +30,7 @@ allowed-tools:
   - AskUserQuestion
 ---
 
-# KernelGen — Unified GPU Operator Generation Skill
+# kernelgen-flagos — Unified GPU Operator Generation Skill
 
 This is a **unified entry point** that bundles four sub-skills into one:
 
@@ -81,7 +81,7 @@ from this skill's directory, then **follow the instructions in that file exactly
 Glob tool to find the path:
 
 ```
-Glob: **/skills/kernelgen/kernelgen-general.md
+Glob: **/skills/kernelgen-flagos/kernelgen-general.md
 ```
 
 Then use the Read tool to read the matched path.
@@ -125,10 +125,10 @@ or asks to submit feedback about the skill:
 
 ```bash
 # Generate a kernel operator (auto-detects repo type)
-/kernelgen relu
+/kernelgen-flagos relu
 
 # Generate with explicit function type
-/kernelgen rms_norm --func-type normalization
+/kernelgen-flagos rms_norm --func-type normalization
 
 # The skill will automatically:
 # - Detect if you're in a FlagGems repo → use FlagGems-specific workflow

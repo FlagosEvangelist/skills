@@ -1,10 +1,10 @@
-# kernelgen: Unified GPU Kernel Operator Generation
+# kernelgen-flagos: Unified GPU Kernel Operator Generation
 
 [中文版](README_zh.md)
 
 ## Overview
 
-`kernelgen` is a unified AI coding skill that generates GPU kernel operators via the `kernelgen-mcp` MCP service. It automatically detects the target repository type and dispatches to the appropriate specialized workflow.
+`kernelgen-flagos` is a unified AI coding skill that generates GPU kernel operators via the `kernelgen-mcp` MCP service. It automatically detects the target repository type and dispatches to the appropriate specialized workflow.
 
 ### Problem Statement
 
@@ -23,13 +23,13 @@ This unified skill bundles **four sub-skills** into one package, so users only n
 
 ```bash
 # Generate a kernel operator (auto-detects repo type)
-/kernelgen relu
+/kernelgen-flagos relu
 
 # Generate with explicit function type
-/kernelgen rms_norm --func-type normalization
+/kernelgen-flagos rms_norm --func-type normalization
 
 # Generate for any operator
-/kernelgen silu_and_mul
+/kernelgen-flagos silu_and_mul
 ```
 
 The skill will automatically:
