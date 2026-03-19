@@ -1,8 +1,8 @@
-# kernelgen：统一 GPU 算子生成技能
+# kernelgen-flagos：统一 GPU 算子生成技能
 
 ## 概述
 
-`kernelgen` 是一个统一的 AI 编程技能，通过 `kernelgen-mcp` MCP 服务生成 GPU 算子。它自动检测目标仓库类型，并分发到相应的专用工作流。
+`kernelgen-flagos` 是一个统一的 AI 编程技能，通过 `kernelgen-mcp` MCP 服务生成 GPU 算子。它自动检测目标仓库类型，并分发到相应的专用工作流。
 
 ### 解决的问题
 
@@ -21,13 +21,13 @@
 
 ```bash
 # 生成算子（自动检测仓库类型）
-/kernelgen relu
+/kernelgen-flagos relu
 
 # 指定函数类型
-/kernelgen rms_norm --func-type normalization
+/kernelgen-flagos rms_norm --func-type normalization
 
 # 生成任意算子
-/kernelgen silu_and_mul
+/kernelgen-flagos silu_and_mul
 ```
 
 技能会自动：
@@ -69,7 +69,7 @@
 ## 目录结构
 
 ```
-skills/kernelgen/
+skills/kernelgen-flagos/
 ├── SKILL.md                       # 统一入口（路由逻辑）
 ├── kernelgen-general.md           # 通用子技能
 ├── kernelgen-for-flaggems.md      # FlagGems 专用子技能
@@ -88,7 +88,7 @@ skills/kernelgen/
 
 ```bash
 # 安装统一的 kernelgen 技能（包含所有子技能）
-npx skills add flagos-ai/skills --skill kernelgen -a claude-code
+npx skills add flagos-ai/skills --skill kernelgen-flagos -a claude-code
 
 # 或一次安装所有 Flagos 技能
 npx skills add flagos-ai/skills -a claude-code
@@ -99,7 +99,7 @@ npx skills add flagos-ai/skills -a claude-code
 ```bash
 # 在项目根目录下
 mkdir -p .claude/skills
-cp -r <path-to-this-repo>/skills/kernelgen .claude/skills/
+cp -r <path-to-this-repo>/skills/kernelgen-flagos .claude/skills/
 ```
 
 ---
