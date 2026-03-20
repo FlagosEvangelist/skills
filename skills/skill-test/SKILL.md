@@ -5,7 +5,7 @@ description: A test skill for CI validation testing purposes
 
 # Skill Test
 
-This is a test skill created to verify that the CI validation pipeline catches naming violations.
+This is a test skill created to verify that the CI validation pipeline correctly catches naming violations.
 
 ## Usage
 
